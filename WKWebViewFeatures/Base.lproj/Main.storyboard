@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WKWebViewFeatures" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Npl-Sk-KpG">
+                                <rect key="frame" x="16" y="35" width="343" height="513"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uss-TR-PfQ">
+                                <rect key="frame" x="37" y="599" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1th-HJ-1mD"/>
+                                    <constraint firstAttribute="width" constant="30" id="pbg-aM-dgr"/>
+                                </constraints>
+                                <state key="normal" title="Left"/>
+                                <connections>
+                                    <action selector="leftTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="1de-IF-NWt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Cu-SU-scH">
+                                <rect key="frame" x="138" y="599" width="99" height="30"/>
+                                <state key="normal" title="Change Image"/>
+                                <connections>
+                                    <action selector="executeJS" destination="BYZ-38-t0r" eventType="touchUpInside" id="ovN-w1-SBy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5y-xB-hzd">
+                                <rect key="frame" x="318" y="599" width="36" height="30"/>
+                                <state key="normal" title="Right"/>
+                                <connections>
+                                    <action selector="rightTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="8ae-1D-wkt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Cu-SU-scH" firstAttribute="top" secondItem="Npl-Sk-KpG" secondAttribute="bottom" constant="51" id="2g1-gd-ezg"/>
+                            <constraint firstItem="b5y-xB-hzd" firstAttribute="centerY" secondItem="0Cu-SU-scH" secondAttribute="centerY" id="Eeq-FE-XOU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uss-TR-PfQ" secondAttribute="bottom" constant="38" id="JXc-FW-GT5"/>
+                            <constraint firstItem="0Cu-SU-scH" firstAttribute="centerY" secondItem="uss-TR-PfQ" secondAttribute="centerY" id="QRb-jB-BDb"/>
+                            <constraint firstItem="uss-TR-PfQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="QeU-Wx-wfX"/>
+                            <constraint firstItem="b5y-xB-hzd" firstAttribute="leading" secondItem="0Cu-SU-scH" secondAttribute="trailing" constant="81" id="ZHP-O5-Nwr"/>
+                            <constraint firstItem="Npl-Sk-KpG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="dtX-Bv-M1Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Npl-Sk-KpG" secondAttribute="trailing" constant="16" id="f8h-Me-C0b"/>
+                            <constraint firstItem="0Cu-SU-scH" firstAttribute="leading" secondItem="uss-TR-PfQ" secondAttribute="trailing" constant="71" id="oDg-lO-aX8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b5y-xB-hzd" secondAttribute="trailing" constant="21" id="oOM-QT-UNt"/>
+                            <constraint firstItem="Npl-Sk-KpG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vLm-Pa-gCl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="webViewHolder" destination="Npl-Sk-KpG" id="X6g-Kv-LCJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>

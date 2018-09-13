@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Hello Test WKWebView</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content=""/>
+        <meta http-equiv="Content-Type" content="no-cache"/>
+        <meta http-equiv="Expires" content="-1"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <script type="text/javascript" src="./scripts/hello.js"></script>
+    </head>
+    
+    <body>
+        <h1>Testing JS</h1>
+        <button type="button" id="PostAScript">Post A Script Message!</button></br>
+        <a href="#" onClick="alert('Thanks for the click')">Click me</a></br>
+        <a href="https://www.google.com">Go to Google</a></br>
+        <img id ="img" src = "http://images.clipartpanda.com/smiley-face-png-1407-smiley-face.png" width = "200" height = "200">
+            
+            <script>var postAScriptbutton = document.getElementById('PostAScript');
+                postAScriptbutton.addEventListener('click', function() {
+                                                   window.webkit.messageHandlers.postascript.postMessage('posting a script');
+                                                   }, false);</script>
+    </body>
+    
+</html>
